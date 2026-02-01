@@ -1,0 +1,28 @@
+import 'package:flutter/material.dart';
+import 'package:flutter_application_2/screens/iphone8.dart';
+
+class EmptyListView extends StatelessWidget {
+  const EmptyListView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      children: [
+        const SizedBox(height: 20),
+        Card(
+          child: ListTile(leading: Image.asset('assets/iphone8plus.webp'),
+          title: const Text("Iphone 8+ 64GB"),
+          subtitle: const Text("R3000"),
+          trailing: ElevatedButton(onPressed: (){}, child: const Text("View")),),),
+          SizedBox(height: 20),
+            Card(
+          child: ListTile(leading: Image.asset('assets/iphoneX.webp'),
+          title: const Text("Iphone X 64GB"),
+          subtitle: const Text("R3800"),
+          trailing: ElevatedButton(
+            onPressed: (){Navigator.push(context, MaterialPageRoute(builder: (context) => const ItemDetailsScreen()));}, 
+            child: const Text("View")),),)
+      ],
+    );
+  }
+}
