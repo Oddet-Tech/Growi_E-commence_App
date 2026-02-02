@@ -6,73 +6,89 @@ class EmptyListView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [
-        const SizedBox(height: 20),
-        Card(
-  child: ListTile(
-    leading: SizedBox(
-      width: 50,
-      height: 50,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          const CircularProgressIndicator(strokeWidth: 2),
-          Image.asset(
-            'assets/iphone8plus.webp',
-            fit: BoxFit.cover,
-          ),
-        ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('ISupply'),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context);
+          },
+        ),
       ),
-    ),
-    title: const Text("Iphone 8+ 64GB"),
-    subtitle: const Text("R3000"),
-    trailing: ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const ItemDetailsScreen(),
-          ),
-        );
-      },
-      child: const Text("View"),
-    ),
-  ),
-),
+      body: ListView(
+        children: [
+          const SizedBox(height: 20),
 
-          SizedBox(height: 20),
+          /// iPhone 8+
           Card(
-  child: ListTile(
-    leading: SizedBox(
-      width: 50,
-      height: 50,
-      child: Stack(
-        alignment: Alignment.center,
-        children: [
-          const CircularProgressIndicator(strokeWidth: 2),
-          Image.asset(
-            'assets/iphoneX.webp',
-            fit: BoxFit.cover,
+            child: ListTile(
+              leading: SizedBox(
+                width: 50,
+                height: 50,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    const CircularProgressIndicator(strokeWidth: 2),
+                    Image.asset(
+                      'assets/iphone8plus.webp',
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                ),
+              ),
+              title: const Text("Iphone 8+ 64GB"),
+              subtitle: const Text("R3000"),
+              trailing: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ItemDetailsScreen(),
+                    ),
+                  );
+                },
+                child: const Text("View"),
+              ),
+            ),
+          ),
+
+          const SizedBox(height: 20),
+
+          /// iPhone X
+          Card(
+            child: ListTile(
+              leading: SizedBox(
+                width: 50,
+                height: 50,
+                child: Stack(
+                  alignment: Alignment.center,
+                  children: [
+                    const CircularProgressIndicator(strokeWidth: 2),
+                    Image.asset(
+                      'assets/iphoneX.webp',
+                      fit: BoxFit.cover,
+                    ),
+                  ],
+                ),
+              ),
+              title: const Text("Iphone X 64GB"),
+              subtitle: const Text("R3800"),
+              trailing: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ItemDetailsScreen2(),
+                    ),
+                  );
+                },
+                child: const Text("View"),
+              ),
+            ),
           ),
         ],
       ),
-    ),
-    title: const Text("Iphone X 64GB"),
-    subtitle: const Text("R3800"),
-    trailing: ElevatedButton(
-      onPressed: () {
-        Navigator.push(
-          context,
-          MaterialPageRoute(
-            builder: (context) => const ItemDetailsScreen2(),
-          ),
-        );
-      },
-      child: const Text("View"),
-    ),
-  ),
-),
-   ] );
+    );
   }
 }

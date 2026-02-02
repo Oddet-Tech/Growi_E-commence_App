@@ -72,6 +72,8 @@ flutter:
     - Assets/trans.png
     - Assets/iphone8plus.webp
     - Assets/iphoneX.webp
+    - Assets/iphone.webp
+    - Assets/sneeker.png
   
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

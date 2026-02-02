@@ -1,6 +1,6 @@
 import 'dart:io';
 import 'package:flutter_application_2/screens/Tickets_Screen.dart';
-import 'package:flutter_application_2/screens/isupply.dart';
+import 'package:flutter_application_2/screens/istore.dart';
 import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_2/screens/dashboard.dart';
@@ -42,7 +42,7 @@ class _RealHomeState extends State<RealHome> {
             indicatorColor: Colors.black,
             tabs: [
               Tab(text: 'Tickets'),
-              Tab(text: 'ISupply'),
+              Tab(text: 'Stores'),
             ],
           ),
         ),
@@ -50,7 +50,7 @@ class _RealHomeState extends State<RealHome> {
         body: TabBarView(
           children: [
           const  Tickets(),
-          const EmptyListView(),
+          const IStoreScreen(),
             _buildBuyiestView(),
           ],
         ),
