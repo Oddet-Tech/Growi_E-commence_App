@@ -50,7 +50,7 @@ class _RealHomeState extends State<RealHome> {
         body: TabBarView(
           children: [
           const  Tickets(),
-          const IStoreScreen(),
+          IStoreScreen(),
             _buildBuyiestView(),
           ],
         ),

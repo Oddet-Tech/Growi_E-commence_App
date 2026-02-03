@@ -12,6 +12,7 @@ class IStoreScreen extends StatelessWidget {
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
+           
             GestureDetector(
               onTap: () {
                 Navigator.push(
